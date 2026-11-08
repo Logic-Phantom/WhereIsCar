@@ -1,0 +1,12 @@
+node_modules/
+dist/
+*.ait
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.vite/
+coverage/
+.granite/
+.claude/
