@@ -14,7 +14,7 @@ export function Intro() {
   return (
     <div className="intro">
       <div className="intro-top">
-        <img className="intro-logo" src="./brand/icon.svg" alt="" width={112} height={112} />
+        <img className="intro-logo" src="./brand/logo.png" alt="" width={112} height={112} />
         <h1 className="intro-title">내 차 어딨지?</h1>
         <p className="intro-sub">Where's My Car</p>
         <p className="intro-hand">

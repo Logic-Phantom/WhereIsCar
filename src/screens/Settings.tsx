@@ -30,7 +30,7 @@ export function Settings() {
     <Screen tabbar>
       <Header title="설정" back={false} />
       <div className="app-card">
-        <img src="./brand/icon.svg" alt="" width={56} height={56} />
+        <img src="./brand/logo.png" alt="" width={56} height={56} />
         <div>
           <strong>내 차 어딨지?</strong>
           <span className="muted">v{APP_VERSION}</span>

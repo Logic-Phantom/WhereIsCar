@@ -23,7 +23,7 @@ npm test           # 단위 테스트(vitest)
 npm run typecheck
 npm run build      # 라이선스 목록 생성 + 타입 검사 + vite build
 npm run build:ait  # 앱인토스 업로드 번들(whereiscar.ait)
-npm run icons      # assets/brand/icon.svg → 콘솔 로고·파비콘·OG 이미지
+npm run icons      # 시안 이미지에서 아이콘을 잘라 콘솔 로고·앱 로고·파비콘·OG 생성(Pillow)
 ```
 
 구조
@@ -71,3 +71,7 @@ docs/                    DECISIONS · RELEASE_CHECKLIST · 시안 · 원본 기�
   - `npm run typecheck` 통과, `npm run build` 통과, `npm run build:ait` → `whereiscar.ait` 생성(약 198KB)
   - 브라우저 미리보기(데스크톱 Chrome 엔진): 시작→홈→주차 저장→타이머→요금표(2시간 35분 → 예상 5,000원)→새로고침 후 복원→종료(실제 4,500원)→검색·통계·설정 확인, 콘솔 오류 없음
 - **미실행**: 앱인토스 샌드박스, 토스 iOS/Android 실기기(위치·카메라·Storage·openURL 실제 동작, 사진 재진입 지속성), 콘솔 등록. 데이터 외부 전송 없음.
+
+### 2026-11-08 — 앱 아이콘 교체·콘솔 등록
+- 앱 아이콘을 사용자 시안 왼쪽 위 아이콘에서 그대로 잘라 교체(`scripts/build-app-icons.py`, D-017). 직접 그린 SVG 아이콘과 resvg 의존성 제거.
+- 앱인토스 콘솔(워크스페이스 '오늘의상한가')에 `whereiscar` 앱 생성, 번들·기본 정보·카테고리(자동차>주차)·로고·키워드·주요 기능 입력 후 임시저장. 확인 항목 체크·검토 요청은 소유자 결정 대기.

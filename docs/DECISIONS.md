@@ -21,6 +21,6 @@ API 근거는 설치된 `node_modules/@apps-in-toss/web-framework/dist/index.d.t
 | D-014 | 타이머 = `now - startedAt` 계산(화면 열린 동안 1초 갱신). 원형 링은 현재 1시간 안 진행률 | 백그라운드 타이머 없음. 시계가 시작보다 1분 넘게 이르면 '확인 필요' |
 | D-015 | 요금: 무료 시간 → 기본 시간·요금 → 추가 단위(올림)·요금 → 1회 최대 요금. 기록마다 스냅샷 저장. 항상 '예상'·'사용자 입력 요금표 기준' 표기 | 프롬프트 §6.2. 일 최대요금·심야/주말·할인·회차는 계산 안 함. 결제 기능 없음 |
 | D-016 | 실제 정산 금액은 종료 화면·상세에서 **화면 안 입력칸**으로 받음(`window.prompt` 미사용) | RN WebView에서 prompt 동작 보장 안 됨 |
-| D-017 | 아이콘: `assets/brand/icon.svg` 직접 그린 벡터(지도 타일 + 파란 P 핀 + 흰 차) → `npm run icons`(resvg)로 콘솔 600px·파비콘·OG 생성 | 시안 아이콘 재현, 외부 에셋·토스 로고 없음 |
+| D-017 | 앱 아이콘 = **사용자 시안(`docs/design/reference.webp`) 왼쪽 위 아이콘을 그대로 잘라 사용**(x 64~274, y 25~235 실측). `npm run icons`(Pillow)로 콘솔 600px·앱 안 로고·파비콘·OG 생성 | 사용자 지시(2026-11-08). 직접 그린 SVG 아이콘은 폐기. 원본 해상도가 약 211px라 600px 확대 시 약간 부드러움 — 고해상도 원본을 받으면 교체 |
 | D-018 | 프롬프트 권장 문서 16종 대신 **README(상태표·Work Log) + DECISIONS + RELEASE_CHECKLIST** 로 압축 | 같은 내용을 여러 문서에 흩지 않음. 출시 판단에 필요한 정보만 유지 |
 | D-019 | `.npmrc legacy-peer-deps=true` | `@apps-in-toss/cli`(babel 7)와 `@vitejs/plugin-react`의 선택적 peer(babel 8) 충돌. 런타임 영향 없음 |
